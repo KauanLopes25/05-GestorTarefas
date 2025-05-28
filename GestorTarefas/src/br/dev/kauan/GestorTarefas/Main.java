@@ -7,24 +7,26 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.UUID;
 
+import br.dev.kauan.GestorTarefas.dao.FuncionarioDAO;
 import br.dev.kauan.GestorTarefas.model.Funcionario;
 import br.dev.kauan.GestorTarefas.model.Status;
 import br.dev.kauan.GestorTarefas.model.Tarefa;
+import br.dev.kauan.GestorTarefas.utils.Utils;
 
 public class Main {
 
 	public static void main(String[] args) {
-		//testarLeituraEsctritaArquivo();
+		//testarLeituraEscritaArquivo();
 		Funcionario funcionario = new Funcionario("Kauan","Programador");
-		Tarefa tarefa = new Tarefa(funcionario);
-		tarefa.setNome("Lavar a Louça");
-		tarefa.setDataInicio(LocalDate.of(2025, 05, 21));
-		tarefa.setPrazo(1);
-		tarefa.getDataPrevistaEntrega();
+		funcionario.setSetor("Tecnologia da Informação");
+		funcionario.setSalario(6987.98);
+		FuncionarioDAO dao = new FuncionarioDAO(funcionario);
+		dao.gravar();
 	}
 
-	private static void testarLeituraEsctritaArquivo() {
+	private static void testarLeituraEscritaArquivo() {
 		String so = System.getProperty("os.name");
 		System.out.println(so);
 
