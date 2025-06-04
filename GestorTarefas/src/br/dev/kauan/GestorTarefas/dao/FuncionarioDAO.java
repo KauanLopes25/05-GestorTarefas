@@ -12,17 +12,20 @@ public class FuncionarioDAO {
 		this.funcionario = funcionario;
 	}
 
-	public void gravar() {
+	public boolean gravar() {
 		ArquivoFuncionarioFactory aff = new ArquivoFuncionarioFactory();
 		try {
 			BufferedWriter bw = aff.getBw();
 			bw.write(funcionario.toString());
 			bw.flush();
-			System.out.println(funcionario.getNome()+" gravado com sucesso!");
+			return true;
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
+			return false;
 		}
-		
+	}
+	
+	public void getFuncionarios() {
 		
 	}
 }

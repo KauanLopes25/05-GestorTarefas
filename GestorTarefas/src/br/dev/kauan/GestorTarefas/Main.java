@@ -13,17 +13,24 @@ import br.dev.kauan.GestorTarefas.dao.FuncionarioDAO;
 import br.dev.kauan.GestorTarefas.model.Funcionario;
 import br.dev.kauan.GestorTarefas.model.Status;
 import br.dev.kauan.GestorTarefas.model.Tarefa;
+import br.dev.kauan.GestorTarefas.ui.FuncionarioFrame;
+import br.dev.kauan.GestorTarefas.ui.FuncionarioListaFrame;
 import br.dev.kauan.GestorTarefas.utils.Utils;
 
 public class Main {
 
 	public static void main(String[] args) {
+		
+		FuncionarioListaFrame f = new FuncionarioListaFrame();
+		
+		//new FuncionarioFrame();
+		
 		//testarLeituraEscritaArquivo();
-		Funcionario funcionario = new Funcionario("Kauan","Programador");
-		funcionario.setSetor("Tecnologia da Informação");
-		funcionario.setSalario(6987.98);
-		FuncionarioDAO dao = new FuncionarioDAO(funcionario);
-		dao.gravar();
+//		Funcionario funcionario = new Funcionario("Kauan","Programador");
+//		funcionario.setSetor("Tecnologia da Informação");
+//		funcionario.setSalario(6987.98);
+//		FuncionarioDAO dao = new FuncionarioDAO(funcionario);
+//		dao.gravar();
 	}
 
 	private static void testarLeituraEscritaArquivo() {
