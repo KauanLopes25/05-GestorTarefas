@@ -20,12 +20,15 @@ import br.dev.kauan.GestorTarefas.utils.Utils;
 public class Main {
 
 	public static void main(String[] args) {
+
+		FuncionarioDAO dao = new FuncionarioDAO(null);
+		dao.getFuncionarios();
 		
 		FuncionarioListaFrame f = new FuncionarioListaFrame();
-		
-		//new FuncionarioFrame();
-		
-		//testarLeituraEscritaArquivo();
+
+		// new FuncionarioFrame();
+
+		// testarLeituraEscritaArquivo();
 //		Funcionario funcionario = new Funcionario("Kauan","Programador");
 //		funcionario.setSetor("Tecnologia da Informação");
 //		funcionario.setSalario(6987.98);

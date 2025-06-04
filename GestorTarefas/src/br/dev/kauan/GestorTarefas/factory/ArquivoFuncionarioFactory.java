@@ -13,14 +13,14 @@ public class ArquivoFuncionarioFactory {
 	private BufferedWriter bw;
 	private FileReader fr;
 	private BufferedReader br;
-	
-	//throws lança uma excessão para quem chamou o método
+
+	// throws lança uma excessão para quem chamou o método
 	public BufferedWriter getBw() throws IOException {
 		fw = new FileWriter(caminho, true);
 		bw = new BufferedWriter(fw);
 		return bw;
 	}
-	
+
 	public BufferedReader getBr() throws IOException {
 		fr = new FileReader(caminho);
 		br = new BufferedReader(fr);

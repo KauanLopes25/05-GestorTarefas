@@ -104,15 +104,16 @@ public class FuncionarioFrame {
 				f.setSetor(txtSetor.getText());
 				double salario = Double.parseDouble(txtSalario.getText());
 				f.setSalario(salario);
-				
+
 				FuncionarioDAO dao = new FuncionarioDAO(f);
 				boolean sucesso = dao.gravar();
-				
+
 				if (sucesso) {
 					JOptionPane.showMessageDialog(telaFuncionario, "Funcionário Gravado com Sucesso");
 					limparFormulario();
 				} else {
-					JOptionPane.showMessageDialog(telaFuncionario, "Ocorreu um erro na gravação.\nTente Novamente.\nSe o problema persistir, entre em contato com o suporte");
+					JOptionPane.showMessageDialog(telaFuncionario,
+							"Ocorreu um erro na gravação.\nTente Novamente.\nSe o problema persistir, entre em contato com o suporte");
 				}
 			}
 		});
@@ -121,20 +122,19 @@ public class FuncionarioFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				int resposta =JOptionPane.showConfirmDialog(telaFuncionario, "Sair do Sistema?", "Atencão!", JOptionPane.YES_NO_OPTION);
+				int resposta = JOptionPane.showConfirmDialog(telaFuncionario, "Sair do Sistema?", "Atencão!",
+						JOptionPane.YES_NO_OPTION);
 				if (resposta == 0) {
 					System.exit(JFrame.EXIT_ON_CLOSE);
 				}
-				
-				
-				
+
 			}
 		});
 
 		telaFuncionario.setVisible(true);
 
 	}
-	
+
 	private void limparFormulario() {
 		txtMatricula.setText(Utils.gerarUUID8());
 		txtNome.setText(null);
