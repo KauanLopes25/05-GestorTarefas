@@ -17,7 +17,7 @@ public class FuncionarioDAO {
 		this.funcionario = funcionario;
 	}
 
-	public boolean gravar() {
+	public boolean gravarFuncionario() {
 		try {
 			BufferedWriter bw = aff.getBw();
 			bw.write(funcionario.toString());

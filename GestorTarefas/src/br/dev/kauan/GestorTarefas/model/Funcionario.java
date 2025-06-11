@@ -10,8 +10,7 @@ public class Funcionario {
 	private double salario;
 
 	//Construtores do objeto Funcionário
-	public Funcionario() {
-	}
+	public Funcionario() {}
 	public Funcionario(String nome) {
 		setNome(nome);
 		setMatricula(Utils.gerarUUID8());

@@ -10,8 +10,9 @@ public class Tarefa {
 	private LocalDate dataInicio;
 	private int prazo;
 	private LocalDate dataPrevistaEntrega;
-	private DatabaseMetaData dateEntrega;
+	private DatabaseMetaData dataEntrega;
 	private Status status;
+	
 
 	public Tarefa(Funcionario responsavel) {
 		setResponsavel(responsavel);
@@ -61,13 +62,23 @@ public class Tarefa {
 		return dataInicio.plusDays(prazo);
 	}
 
-	public DatabaseMetaData getDateEntrega() {
-		return dateEntrega;
+	public DatabaseMetaData getDataEntrega() {
+		return dataEntrega;
 	}
 
-	public void setDateEntrega(DatabaseMetaData dateEntrega) {
-		this.dateEntrega = dateEntrega;
+	public void setDataEntrega(DatabaseMetaData dateEntrega) {
+		this.dataEntrega = dateEntrega;
 	}
+	
+	@Override // sobreescrevendo um método de outra classe, e marcando override como anotação de sobreescrita.
+	public String toString() {
+		// TODO Auto-generated method stub
+		//System.out.println("Este é o meu toString()");
+		//return super.toString();
+		return nome+","+descricao+","+responsavel+","+dataInicio+","+prazo+","
+			+dataPrevistaEntrega+","+dataEntrega+","+status+"\n";
+	}
+	
 
 //	public Status getStatus() {
 //		LocalDate hoje = LocalDate.now();

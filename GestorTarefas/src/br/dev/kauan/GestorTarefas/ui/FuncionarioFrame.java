@@ -107,7 +107,7 @@ public class FuncionarioFrame {
 				f.setSalario(salario);
 
 				FuncionarioDAO dao = new FuncionarioDAO(f);
-				boolean sucesso = dao.gravar();
+				boolean sucesso = dao.gravarFuncionario();
 
 				if (sucesso) {
 					JOptionPane.showMessageDialog(telaFuncionario, "Funcionário Gravado com Sucesso");
