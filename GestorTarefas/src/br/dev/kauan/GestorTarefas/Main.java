@@ -15,27 +15,39 @@ import br.dev.kauan.GestorTarefas.model.Status;
 import br.dev.kauan.GestorTarefas.model.Tarefa;
 import br.dev.kauan.GestorTarefas.ui.FuncionarioFrame;
 import br.dev.kauan.GestorTarefas.ui.FuncionarioListaFrame;
+import br.dev.kauan.GestorTarefas.ui.GerenciadorFrame;
 import br.dev.kauan.GestorTarefas.utils.Utils;
 
 public class Main {
 
 	public static void main(String[] args) {
+//		new FuncionarioListaFrame(null);
+//		new FuncionarioFrame(null);
+		new GerenciadorFrame();
 
-		FuncionarioDAO dao = new FuncionarioDAO(null);
-		dao.getFuncionarios();
-		
-		FuncionarioListaFrame f = new FuncionarioListaFrame();
-
-		// new FuncionarioFrame();
-
-		// testarLeituraEscritaArquivo();
-//		Funcionario funcionario = new Funcionario("Kauan","Programador");
-//		funcionario.setSetor("Tecnologia da Informação");
-//		funcionario.setSalario(6987.98);
-//		FuncionarioDAO dao = new FuncionarioDAO(funcionario);
-//		dao.gravar();
 	}
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	private static void testarLeituraEscritaArquivo() {
 		String so = System.getProperty("os.name");
 		System.out.println(so);

@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -29,14 +30,14 @@ public class FuncionarioFrame {
 	private JButton btnSalvar;
 	private JButton btnSair;
 
-	public FuncionarioFrame() {
-		criarTela();
+	public FuncionarioFrame(JDialog pai) {
+		criarTela(pai);
 	}
 
-	private void criarTela() {
-		JFrame telaFuncionario = new JFrame("Cadastro Funcionários");
+	private void criarTela(JDialog pai) {
+		JDialog telaFuncionario = new JDialog(pai, true);
 		telaFuncionario.setSize(500, 500); // Tamanho da tela
-		telaFuncionario.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Quando fecharmos a tela, ela será encerrada
+		telaFuncionario.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // Quando fecharmos a tela, ela será encerrada
 																		// na memória
 		telaFuncionario.setLayout(null); // layout livre para posicionamento de containers
 		telaFuncionario.setResizable(false); //
@@ -125,7 +126,7 @@ public class FuncionarioFrame {
 				int resposta = JOptionPane.showConfirmDialog(telaFuncionario, "Sair do Sistema?", "Atencão!",
 						JOptionPane.YES_NO_OPTION);
 				if (resposta == 0) {
-					System.exit(JFrame.EXIT_ON_CLOSE);
+					telaFuncionario.dispose();
 				}
 
 			}

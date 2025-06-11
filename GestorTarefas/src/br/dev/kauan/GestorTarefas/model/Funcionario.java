@@ -11,10 +11,8 @@ public class Funcionario {
 
 	//Construtores do objeto Funcionário
 	public Funcionario() {
-		System.out.println("Criando um Funcionário...");
 	}
 	public Funcionario(String nome) {
-		System.out.println("Criando um Funcionário "+nome);
 		setNome(nome);
 		setMatricula(Utils.gerarUUID8());
 	}
