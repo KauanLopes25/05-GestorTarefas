@@ -53,6 +53,15 @@ public class GerenciadorFrame {
 				
 			}
 		});
+		
+		btnTarefa.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				new TarefaListaFrame(telaGerenciador);
+				
+			}
+		});
 
 		painel.add(labelTitulo);
 		painel.add(btnFuncionarios);

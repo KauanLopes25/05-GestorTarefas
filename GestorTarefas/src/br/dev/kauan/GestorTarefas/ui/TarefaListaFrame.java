@@ -58,7 +58,14 @@ public class TarefaListaFrame {
 		btnSair = new JButton("Sair");
 		btnSair.setBounds(250, 400, 150, 50);
 		
-		
+		btnCadastrarTarefas.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				new TarefaFrame(telaTarefaLista);
+				
+			}
+		});
 		
 		btnSair.addActionListener(new ActionListener() {
 			

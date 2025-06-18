@@ -26,10 +26,11 @@ public class Main {
 	public static void main(String[] args) {
 //		new FuncionarioListaFrame(null);
 //		new FuncionarioFrame(null);
-//		new GerenciadorFrame();
+		
+		new GerenciadorFrame();
 		
 //		new TarefaListaFrame(null);
-		new TarefaFrame(null);
+//		new TarefaFrame(null);
 		
 //		testarFuncionarioParaTarefa();
 
@@ -37,8 +38,6 @@ public class Main {
 	
 	
 	
-	
-
 	
 	public static void testarFuncionarioParaTarefa () {
 		Funcionario f = new Funcionario("Edvan", "Programador");

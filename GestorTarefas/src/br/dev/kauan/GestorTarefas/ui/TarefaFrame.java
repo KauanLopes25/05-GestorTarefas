@@ -2,11 +2,14 @@ package br.dev.kauan.GestorTarefas.ui;
 
 import java.awt.Color;
 import java.awt.Container;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 import br.dev.kauan.GestorTarefas.utils.Utils;
@@ -103,6 +106,19 @@ public class TarefaFrame {
 		btnSair.setBounds(220, 640, 120, 40);
 		btnSair.setOpaque(true);
 		btnSair.setBackground(Color.RED);
+		
+		btnSair.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				int resposta = JOptionPane.showConfirmDialog(telaTarefa, "Sair do Sistema?", "Atencão!",
+						JOptionPane.YES_NO_OPTION);
+				if (resposta == 0) {
+					telaTarefa.dispose();
+				}
+
+			}
+		});
 		
 		painel.add(labelCodigo);
 		painel.add(labelDataEntregue);
