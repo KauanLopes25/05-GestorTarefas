@@ -17,6 +17,7 @@ import br.dev.kauan.GestorTarefas.model.Tarefa;
 import br.dev.kauan.GestorTarefas.ui.FuncionarioFrame;
 import br.dev.kauan.GestorTarefas.ui.FuncionarioListaFrame;
 import br.dev.kauan.GestorTarefas.ui.GerenciadorFrame;
+import br.dev.kauan.GestorTarefas.ui.TarefaFrame;
 import br.dev.kauan.GestorTarefas.ui.TarefaListaFrame;
 import br.dev.kauan.GestorTarefas.utils.Utils;
 
@@ -28,7 +29,7 @@ public class Main {
 //		new GerenciadorFrame();
 		
 //		new TarefaListaFrame(null);
-		
+		new TarefaFrame(null);
 		
 //		testarFuncionarioParaTarefa();
 
