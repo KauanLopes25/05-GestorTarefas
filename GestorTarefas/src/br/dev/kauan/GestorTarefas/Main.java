@@ -17,6 +17,7 @@ import br.dev.kauan.GestorTarefas.model.Tarefa;
 import br.dev.kauan.GestorTarefas.ui.FuncionarioFrame;
 import br.dev.kauan.GestorTarefas.ui.FuncionarioListaFrame;
 import br.dev.kauan.GestorTarefas.ui.GerenciadorFrame;
+import br.dev.kauan.GestorTarefas.ui.TarefaListaFrame;
 import br.dev.kauan.GestorTarefas.utils.Utils;
 
 public class Main {
@@ -26,12 +27,39 @@ public class Main {
 //		new FuncionarioFrame(null);
 //		new GerenciadorFrame();
 		
-//		new TarefaDao();
+//		new TarefaListaFrame(null);
+		
+		
+//		testarFuncionarioParaTarefa();
 
 	}
+	
+	
+	
+	
 
 	
-	
+	public static void testarFuncionarioParaTarefa () {
+		Funcionario f = new Funcionario("Edvan", "Programador");
+		f.setMatricula(Utils.gerarUUID8());
+		f.setSetor("TI");
+		double salario = Double.parseDouble("8000");
+		f.setSalario(salario);
+
+		FuncionarioDAO dao = new FuncionarioDAO(f);
+		dao.gravarFuncionario();
+		
+		Tarefa t = new Tarefa(f);
+		t.setPrazo(10);
+		t.setNome("Refatoração");
+		t.setDescricao("Deixar site Responsivo");
+		t.setDataInicio(LocalDate.of(2025, 06, 18));
+		t.setDataEntrega(null);
+		
+		TarefaDao tdao = new TarefaDao(t);
+		tdao.gravarTarefa();
+		
+	}
 	
 	
 	

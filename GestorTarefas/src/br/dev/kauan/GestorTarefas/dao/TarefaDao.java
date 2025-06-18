@@ -7,12 +7,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.dev.kauan.GestorTarefas.factory.ArquivoFuncionarioFactory;
+import br.dev.kauan.GestorTarefas.factory.ArquivoTarefaFactory;
 import br.dev.kauan.GestorTarefas.model.Funcionario;
 import br.dev.kauan.GestorTarefas.model.Tarefa;
 
 public class TarefaDao {
 	private Tarefa tarefa;
-	ArquivoFuncionarioFactory aff = new ArquivoFuncionarioFactory();
+	ArquivoTarefaFactory aff = new ArquivoTarefaFactory();
 
 	public TarefaDao() {
 		gravarTarefa();

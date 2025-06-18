@@ -75,7 +75,7 @@ public class Tarefa {
 		// TODO Auto-generated method stub
 		//System.out.println("Este é o meu toString()");
 		//return super.toString();
-		return nome+","+descricao+","+responsavel+","+dataInicio+","+prazo+","
+		return nome+","+descricao+","+responsavel.getNome()+","+dataInicio+","+prazo+","
 			+dataPrevistaEntrega+","+dataEntrega+","+status+"\n";
 	}
 	
